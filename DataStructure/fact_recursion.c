@@ -1,9 +1,9 @@
 #include<stdio.h>
-int factorail(int number){
+int factorial(int number){
     if(number == 1){
         return 1;
     }else {
-        return number*factorial(n-1);
+        return number*factorial(number-1);
     }
 }
 int main(){
@@ -12,5 +12,6 @@ int main(){
     printf("enter the number: ");
     scanf("\n%d",&n);
     fact = factorial(n);
+    printf("%d",fact);
     return 0;
 }
