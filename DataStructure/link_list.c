@@ -10,7 +10,7 @@ struct node {
 };
 
 
-void inset(int x,struct node *head){
+void insert(int x,struct node *head){
 
 }
 
