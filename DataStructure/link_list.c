@@ -12,15 +12,48 @@ struct node {
 
 void insert(int x,struct node *head){
 
+    struct node *newnode;
+
+    newnode = malloc(sizeof(struct node));
+    newnode ->data = x;
+    newnode->next = NULL;
+
+    if (head==NULL){
+        head=newnode;
+    }else{
+        struct node *p;
+        p=head;
+        while(p->next!=NULL){
+
+            p=p->next;
+        }
+        p->next=newnode;
+    }  
+        
 }
 
-void traverse(struct node *head){
+/*void traverse(struct node *head){
+    if (head != NULL){
+    struct node *p;
+    p = head;
+       while(p != NULL){
+       printf("%d\n",p->data);
+       p = p-> data;
+       }
+    }
+          else {
+          printf("empty");
+
+          }
+    }
 
 }
+*/
+//void delete_from_end(struct node *head){
 
-void delete_from_end(struct node *head){
 
-}
+
+//}
 
 int main(){
 
@@ -42,9 +75,9 @@ int main(){
                     scanf("%d",&num);
                     insert(num,head);
                 break;
-            case 2: traverse(head);
+            case 2: //traverse(head);
                 break;
-            case 3: delete_from_end(head);
+            case 3: //delete_from_end(head);
                 break;
             case 4:exit(0);
                 break;
