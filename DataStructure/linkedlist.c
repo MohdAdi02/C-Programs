@@ -163,6 +163,31 @@ void reverse(){
     }
     head = pnode;
 }
+void searching(){
+    int number;
+    int success =0;
+    printf("enter the number\n");
+    scanf("%d",&number);
+    struct node *p;
+    if(head == NULL){
+        printf("there is no node\n");
+    }else{
+        p = head;
+        while(p!=NULL){
+           if(p->data == number){
+            success = 1;
+            break;
+           }
+        p=p->next;
+       }
+    }
+    if(success==1){
+        printf(" number %d found in the list\n",number);
+    }else{
+        printf("number not found in the list\n");
+    }
+    
+}
 
 void main(){
     int choice;
@@ -179,7 +204,8 @@ void main(){
         printf("8:insert a node at given position\n");
         printf("9:delete node at a givven position\n");
         printf("10:reverse linked list\n");
-        printf("11:Exit\n");
+        printf("11: for searching\n");
+        printf("12:Exit\n");
         scanf("%d",&choice);
 
         switch(choice){
@@ -203,7 +229,9 @@ void main(){
             break;
             case 10:reverse();
             break;
-            case 11: exit(0);
+            case 11: searching();
+            break;
+            case 12: exit(0);
             default:printf("enter the valid choice\n");
         }
     }
