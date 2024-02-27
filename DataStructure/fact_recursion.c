@@ -1,4 +1,5 @@
 #include<stdio.h>
+//factorial ising recursion
 int factorial(int number){
     if(number == 1){
         return 1;

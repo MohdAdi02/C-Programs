@@ -11,7 +11,7 @@ void main(){
     while(1){
         printf("Choose an option\n 1)Add \n 2)Multiply\n 3)subtract\n 4)divide\n 5)exit\n") ;
         scanf("%d",&option);
-        if(option!=5){
+        if(option<=5){
             printf("Enter first number: ");
             scanf("%d",&num1);
             printf("Enter second number: ");
@@ -29,7 +29,9 @@ void main(){
                 break;
             case 4:
                 result = num1 / num2;
+                break;
             case 5: exit (0);    
+            default:printf("invalid choice");
         }
         printf("Result is %d\n",result);
     }

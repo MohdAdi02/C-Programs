@@ -9,10 +9,10 @@ int fabonacci(int n){
     }
 }
 int main(){
-int number;
-printf("Enterthe number\n");
-scanf("%d",&number);
-for(int i = 0; i < number; i++)
- printf(" %d",fabonacci(i));
-return 0;
+    int number;
+    printf("Enter the number\n");
+    scanf("%d",&number);
+    for(int n = 0; n < number; n++)
+    printf(" %d",fabonacci(n));
+    return 0;
 }
