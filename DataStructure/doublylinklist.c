@@ -148,6 +148,18 @@ void afteragivenpos(){
         newnode->next->prev = newnode;
     }
 }
+void delend(){
+    struct node *p;
+    p=head;
+    while(p->next!=NULL){
+        p= p->next;
+    }
+    struct node *temp;
+    temp = p;
+    p->prev->next = NULL;
+    p = p->prev;
+
+}
 void main(){
     int choice;
     while(1){
@@ -159,7 +171,8 @@ void main(){
         printf("5: for findig lenght of list\n");
         printf("6: for insert at a specific postion\n");
         printf("7: insert after a given position\n");
-        printf("8: for exit\n");
+        printf("8: delete from end position\n");
+        printf("9: for exit\n");
         scanf("%d",&choice);
 
         switch(choice){
@@ -177,7 +190,9 @@ void main(){
             break;
             case 7: afteragivenpos();
             break;
-            case 8: exit(0);
+            case 8: delend();
+            break;
+            case 9: exit(0);
             default: printf("Enter the valid choice\n");
         }
     }
